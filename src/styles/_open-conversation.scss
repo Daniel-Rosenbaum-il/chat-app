@@ -1,0 +1,75 @@
+@use "tools/variables" as var;
+
+.open-conversation {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  .conversation-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+  }
+  .messages-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-inline: 0.5rem;
+  }
+  .message-body {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+    width: 100%;
+    gap: 0.25rem;
+    .message-text {
+      border: 1px solid var.$border-color-gray;
+      padding: 0.25rem;
+      border-radius: 0.35rem;
+      word-break: break-all;
+      max-width: 50%;
+      font-size: 0.9rem;
+    }
+    .message-sender {
+      font-size: 0.7rem;
+      opacity: 0.5;
+      margin-inline: 0.5rem;
+    }
+  }
+  .align-left {
+    align-items: flex-start;
+  }
+  .align-right {
+    align-items: flex-end;
+  }
+  .text-background-red {
+    background-color: var.$primary-color;
+  }
+  .text-background-gray {
+    background-color: var.$secondary-color;
+  }
+  form {
+    display: flex;
+    margin: 0.25rem;
+    textarea {
+      color: white;
+      width: 100%;
+      height: 50px;
+      resize: none;
+      background: var.$main-background;
+      border-width: 1px 0 1px 1px;
+      border-style: solid;
+      border-color: var.$border-color-gray;
+      border-radius: 0.5rem 0 0 0.5rem;
+      resize: none;
+    }
+    .btn {
+      border-width: 1px 1px 1px 0;
+      border-style: solid;
+      border-color: var.$border-color-gray;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+  }
+}
