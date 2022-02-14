@@ -9,6 +9,10 @@ group chat if you wish.
 ### Technology that i use:
 
 React
+
 Sass
+
 Context
+
 Socket.io
+
